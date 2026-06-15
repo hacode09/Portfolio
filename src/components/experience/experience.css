@@ -119,7 +119,8 @@
 }
 
 .experience__skills:hover .experience__skills-tooltip,
-.experience__skills:focus-within .experience__skills-tooltip {
+.experience__skills:focus-within .experience__skills-tooltip,
+.experience__skills-tooltip--visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -209,5 +210,25 @@
   .experience__meta {
     align-items: flex-start;
     text-align: left;
+  }
+
+  .experience__skills-tooltip {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    bottom: 1rem;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    max-height: 40vh;
+    overflow-y: auto;
+    z-index: var(--z-modal);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .experience__skills-tooltip--top {
+    bottom: 1rem;
+    top: auto;
   }
 }

@@ -56,6 +56,7 @@ const experienceItems = [
 
 const Experience = () => {
     const [tooltipPlacement, setTooltipPlacement] = useState({ index: null, placement: "bottom" });
+    const [openSkillsIndex, setOpenSkillsIndex] = useState(null);
 
     const handleTooltipOpen = (index, event) => {
         const buttonRect = event.currentTarget.getBoundingClientRect();
@@ -77,6 +78,12 @@ const Experience = () => {
         setTooltipPlacement({ index: null, placement: "bottom" });
     };
 
+    const toggleSkills = (index, event) => {
+        if (window.matchMedia("(hover: hover)").matches) return;
+        setOpenSkillsIndex((prev) => (prev === index ? null : index));
+        handleTooltipOpen(index, event);
+    };
+
     return (
         <section className="section experience" id="experience">
             <h2 className="section__title">Experience</h2>
@@ -94,15 +101,21 @@ const Experience = () => {
                                             type="button"
                                             className="experience__skills-trigger"
                                             aria-label={`Show skills for ${item.company}`}
+                                            aria-expanded={openSkillsIndex === index}
                                             onMouseEnter={(event) => handleTooltipOpen(index, event)}
                                             onFocus={(event) => handleTooltipOpen(index, event)}
                                             onMouseLeave={handleTooltipClose}
                                             onBlur={handleTooltipClose}
+                                            onClick={(event) => toggleSkills(index, event)}
                                         >
                                             <img src={skillIcon} alt="skills" className="experience__skills-icon" />
                                         </button>
                                         <div
-                                            className={`experience__skills-tooltip ${tooltipPlacement.index === index ? `experience__skills-tooltip--${tooltipPlacement.placement}` : ""}`}
+                                            className={`experience__skills-tooltip ${
+                                                tooltipPlacement.index === index || openSkillsIndex === index
+                                                    ? `experience__skills-tooltip--${tooltipPlacement.placement} experience__skills-tooltip--visible`
+                                                    : ""
+                                            }`}
                                             role="tooltip"
                                         >
                                             {item.skills.map((s, i) => (

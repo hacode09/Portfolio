@@ -51,7 +51,7 @@ const Chatbot = () => {
 
   return (
     <div className={`recruiter-chatbot ${open ? "open" : ""}`}>
-      <div className="chatbot-toggle" onClick={toggleOpen} aria-label="Recruiter assistant">
+      <div className="chatbot-toggle" onClick={toggleOpen} aria-label="Recruiter assistant" role="button" tabIndex={0}>
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
