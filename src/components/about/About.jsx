@@ -27,7 +27,7 @@ const About = () => {
 
                     <motion.a
                         download=""
-                        href="https://drive.google.com/file/d/17zwcrL5_DcmVeBpBo4VJ2XuMUHQSK67s/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1xVYwJ94cWU56ZZ7KKxkre0ieyoGfBkvH/view?usp=sharing"
                         className="button button--flex"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 1.0 }}

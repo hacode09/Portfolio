@@ -6,11 +6,31 @@ import microservices from "../../assests/microservices.png";
 import calculator from "../../assests/calculator.jpg";
 import commentsystem from "../../assests/CommentSystem.png";
 import gmailclone from "../../assests/gmail-clone.jpg";
+import canteenfood from "../../assests/canteenfood.png";
+import canteenfoodadmin from "../../assests/canteenfood-admin.png";
 
 export const projectsData = [
 
     {
         id: 1,
+        image: canteenfood,
+        title: "Canteen Food Ordering System (C3food)",
+        category: "full stack",
+        url: "https://github.com/hacode09/Pre-Order-Canteen-food",
+        skills: "Next.js, TypeScript, JavaScript, Neon Database, Prisma and PostgreSQL",
+        demo: "https://c3food.vercel.app/",
+    },
+    {
+        id: 2,
+        image: canteenfoodadmin,
+        title: "Canteen Food Admin Dashboard (C3food)",
+        category: "backend",
+        url: "https://github.com/hacode09/Pre-Order-Canteen-food",
+        skills: "Next.js, TypeScript, JavaScript, Neon Database, Prisma and PostgreSQL",
+        demo: "https://c3food.vercel.app/",
+    },
+    {
+        id: 3,
         image: gmailclone,
         title: "Gmail-clone",
         category: "full stack",
@@ -19,7 +39,7 @@ export const projectsData = [
         demo: "https://gmail-cl.netlify.app/emails/inbox",
     },
     {
-        id: 2,
+        id: 4,
         image: commentsystem,
         title: "Dynamic Comment System",
         category: "frontend",
@@ -29,7 +49,7 @@ export const projectsData = [
     },
 
     {
-        id: 3,
+        id: 5,
         image: realtimechat,
         title: "Real Time Chat Application",
         category: "backend",
@@ -39,7 +59,7 @@ export const projectsData = [
     },
 
     {
-        id: 4,
+        id: 6,
         image: gymImage,
         title: "Fitness Club",
         category: "frontend",
@@ -48,7 +68,7 @@ export const projectsData = [
         demo: "https://er-rahulgym-web.netlify.app/",
     },
     {
-        id: 5,
+        id: 7,
         image: InstaClone,
         title: "Instagram Clone",
         category: "frontend",
@@ -58,7 +78,7 @@ export const projectsData = [
     },
 
     {
-        id: 6,
+        id: 8,
         image: microservices,
         title: "Microservices Communication and Auditing System",
         category: "backend",
@@ -68,7 +88,7 @@ export const projectsData = [
     },
 
     {
-        id: 7,
+        id: 9,
         image: Codeditor,
         title: "Code Editor",
         category: "frontend",
@@ -78,7 +98,7 @@ export const projectsData = [
     },
 
     {
-        id: 8,
+        id: 10,
         image: calculator,
         title: "Calculator",
         category: "frontend",
