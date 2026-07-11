@@ -27,12 +27,14 @@ const About = () => {
 
                     <motion.a
                         download=""
-                        href="https://drive.google.com/file/d/1xVYwJ94cWU56ZZ7KKxkre0ieyoGfBkvH/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Es6h_1uzseYWIuAnlM8zWBRtAqf6AgkD/view?usp=sharing" target="_blank"
+                        className="button button--flex"
+                        whileHover={{ scale: 1.1 }}
                         className="button button--flex"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 1.0 }}
                     >
-                        Resume
+                        Download Resume
                         <svg
                             className="button__icon"
                             xmlns="http://www.w3.org/2000/svg"

@@ -91,40 +91,54 @@ const Data = () => {
 const ToggleSummary = () => {
     const [expanded, setExpanded] = useState(false);
 
-    const part1 = `Full Stack Engineer with 2+ years of experience in building scalable high performance web applications with strong expertise in RESTful API integration, cloud deployment (AWS), and CI/CD pipelines. Contributed to a high-volume enterprise-grade payments platform at Blackhawk Network`;
+    const part1 = `Full Stack Engineer with 2+ years of experience in building scalable, high-performance web applications, including contributions to a high-volume enterprise-grade payments platform at Blackhawk Network`;
 
-    const part2 = `— delivered end-to-end features and resolved critical production issues across complex service boundaries. Certified in Generative AI, Prompt Engineering, and micro1 technical assessment, with demonstrated problem-solving skills in React, JavaScript, TypeScript, Java, Spring Boot, Python, OOP, DSA, SQL, microservices, application performance optimization, and version control.`;
-
+    const part2 = `— where I delivered end-to-end features and resolved critical production issues across complex service boundaries. Skilled in RESTful API integration, AWS cloud deployment, and CI/CD pipelines, with strong expertise in React, JavaScript, TypeScript, Java, Spring Boot, Python, SQL, microservices, application performance optimization, and version control. Certified in Generative AI, Prompt Engineering, and the micro1 Technical Assessment.`;
     return (
         <div>
             <p className="home__description">
-                {part1}
-                {!expanded ? (
-                    <>
-                        <span>... </span>
-                        <button
-                            type="button"
-                            className="home__see-more"
-                            onClick={() => setExpanded(true)}
-                            aria-expanded={expanded}
-                        >
-                            See more
-                        </button>
-                    </>
-                ) : (
-                    <>
-                        <span>{part2} </span>
-                        <button
-                            type="button"
-                            className="home__see-more"
-                            onClick={() => setExpanded(false)}
-                            aria-expanded={expanded}
-                        >
-                            See less
-                        </button>
-                    </>
-                )}
-            </p>
+    Full Stack Engineer with 2+ years of experience in building scalable,
+    high-performance web applications, including{" "}
+    <strong>
+        contributions to a high-volume enterprise-grade payments platform at
+        Blackhawk Network
+    </strong>
+
+    {!expanded ? (
+        <>
+            <span>... </span>
+            <button
+                type="button"
+                className="home__see-more"
+                onClick={() => setExpanded(true)}
+            >
+                See more
+            </button>
+        </>
+    ) : (
+        <>
+            <span>
+                {" "}
+                — where I delivered end-to-end features and resolved critical
+                production issues across complex service boundaries. Skilled in
+                RESTful API integration, AWS cloud deployment, and CI/CD
+                pipelines, with strong expertise in React, JavaScript,
+                TypeScript, Java, Spring Boot, Python, SQL, microservices,
+                application performance optimization, and version control.
+                Certified in Generative AI, Prompt Engineering, and the micro1
+                Technical Assessment.
+            </span>
+
+            <button
+                type="button"
+                className="home__see-more"
+                onClick={() => setExpanded(false)}
+            >
+                See less
+            </button>
+        </>
+    )}
+</p>
         </div>
     );
 };
