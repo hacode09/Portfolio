@@ -9,30 +9,34 @@ const About = () => {
         <section className="section about" id="about">
             <h2 className="section__title">About Me</h2>
             <div className="about__container container grid">
-                <img src={myprofile3} alt="" className="about__img" />
+                <img src={myprofile3} alt="Rahul Kumar profile" className="about__img" />
                 <div className="about__data">
                     <Info />
                     <p className="about__description">
-                        Building scalable web applications and enterprise-grade software with 2+ years of experience in frontend, backend, cloud deployment, and microservices architecture. Passionate about creating high-performance products that solve real-world problems and deliver exceptional user experiences.;{")"} <a
-                href="https://www.linkedin.com/in/er-rahul/"
-                className="home__social-icon-linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="uil uil-linkedin-alt"></i>
-            </a>
+                        Building scalable web applications and enterprise-grade software with 2+ years of experience in frontend, backend, cloud deployment, and microservices architecture. Passionate about creating high-performance products that solve real-world problems and deliver exceptional user experiences.{" "}
+                        <a
+                            href="https://www.linkedin.com/in/er-rahul/"
+                            className="home__social-icon-linkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
+                        >
+                            <i className="uil uil-linkedin-alt"></i>
+                        </a>
                     </p>
 
                     <motion.a
                         download=""
-                        href="https://drive.google.com/file/d/17zwcrL5_DcmVeBpBo4VJ2XuMUHQSK67s/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1Es6h_1uzseYWIuAnlM8zWBRtAqf6AgkD/view?usp=sharing" target="_blank"
+                        className="button button--flex"
+                        whileHover={{ scale: 1.1 }}
                         className="button button--flex"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 1.0 }}
                     >
-                        Resume
+                        Download Resume
                         <svg
-                            class="button__icon"
+                            className="button__icon"
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"

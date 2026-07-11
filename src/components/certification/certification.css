@@ -79,4 +79,8 @@
   .certification__container {
     grid-template-columns: 1fr;
   }
+
+  .certification__card {
+    padding: 1.25rem;
+  }
 }

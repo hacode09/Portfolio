@@ -45,7 +45,7 @@ const Contact = () => {
                     <div className="contact__info">
                         {/* contact card */}
                         <div className="contact__card">
-                            <i className="bx bx-mail-send contact__card-icon"></i>
+                            <i className="uil uil-envelope contact__card-icon"></i>
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">
                                 h.raul0905@gmail.com
@@ -56,18 +56,17 @@ const Contact = () => {
                                 className="contact__button"
                             >
                                 Write me
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                                <i className="uil uil-arrow-right contact__button-icon"></i>
                             </a>
                         </div>
-                        {/* contact card */}
                         <div className="contact__card">
-                            <i className="bx bx-phone contact__card-icon"></i>
+                            <i className="uil uil-phone contact__card-icon"></i>
                             <h3 className="contact__card-title">Phone</h3>
-                            <span className="contact__card-data">{`+(91)766-716-312-5`}</span>
+                            <span className="contact__card-data">+91 766-716-3125</span>
 
-                            <a href="tel:+(91)8887995238" className="contact__button">
+                            <a href="tel:+917667163125" className="contact__button">
                                 Contact me
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                                <i className="uil uil-arrow-right contact__button-icon"></i>
                             </a>
                         </div>
                     </div>
@@ -93,7 +92,8 @@ const Contact = () => {
                                 type="email"
                                 name="email"
                                 className="contact__form-input"
-                                placeholder="youremail@boohoo.com"
+                                placeholder="youremail@example.com"
+                                required
                             />
                         </div>
 
@@ -105,9 +105,11 @@ const Contact = () => {
                                 rows="10"
                                 className="contact__form-input"
                                 placeholder="Message"
+                                required
                             ></textarea>
                         </div>
                         <motion.button
+                            type="submit"
                             className="button button--flex"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.0 }}

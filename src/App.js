@@ -9,10 +9,15 @@ import Contact from "./components/contact/Contact";
 import Work from "./components/work/Work";
 import Certification from "./components/certification/Certification";
 import Chatbot from "./components/chatbot/Chatbot";
+import Footer from "./components/footer/Footer";
+import BackToTop from "./components/footer/BackToTop";
 
 function App() {
   return (
     <>
+      <a href="#home" className="skip-link">
+        Skip to main content
+      </a>
       <Header />
       <main className="main">
         <Home />
@@ -24,6 +29,8 @@ function App() {
         <Contact />
         <Chatbot />
       </main>
+      <Footer />
+      <BackToTop />
     </>
   );
 }

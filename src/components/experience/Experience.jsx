@@ -42,7 +42,7 @@ const experienceItems = [
         company: "Refactor Academy",
         role: "Associate Software Engineer",
         location: "Bangalore, india / On-site",
-        duration: "Jan 2024 - Dec 2024",
+        duration: "April 2024 - Dec 2024",
         skills: ["React", "Redux","TypeScript", "JavaScript", "BootStrap", "Node.js", "Nest.js", "Express", "MongoDB", "Rest APIs","MySQL", "Postman", "Jenkins", "AWS", "SonarQube", "Git/GitHub", "Microservices", "CI/CD",  "Performance Optimization", "Production Debugging", "Production Deployment", "Unit Testing"],
         details: [
             "Designed and developed the candidate report UI for Skill IQ (B2B AI Saas Product) , a production-grade assessment platform, using React and Redux improving report load performance and user readability.",
@@ -56,6 +56,7 @@ const experienceItems = [
 
 const Experience = () => {
     const [tooltipPlacement, setTooltipPlacement] = useState({ index: null, placement: "bottom" });
+    const [openSkillsIndex, setOpenSkillsIndex] = useState(null);
 
     const handleTooltipOpen = (index, event) => {
         const buttonRect = event.currentTarget.getBoundingClientRect();
@@ -77,6 +78,12 @@ const Experience = () => {
         setTooltipPlacement({ index: null, placement: "bottom" });
     };
 
+    const toggleSkills = (index, event) => {
+        if (window.matchMedia("(hover: hover)").matches) return;
+        setOpenSkillsIndex((prev) => (prev === index ? null : index));
+        handleTooltipOpen(index, event);
+    };
+
     return (
         <section className="section experience" id="experience">
             <h2 className="section__title">Experience</h2>
@@ -94,15 +101,21 @@ const Experience = () => {
                                             type="button"
                                             className="experience__skills-trigger"
                                             aria-label={`Show skills for ${item.company}`}
+                                            aria-expanded={openSkillsIndex === index}
                                             onMouseEnter={(event) => handleTooltipOpen(index, event)}
                                             onFocus={(event) => handleTooltipOpen(index, event)}
                                             onMouseLeave={handleTooltipClose}
                                             onBlur={handleTooltipClose}
+                                            onClick={(event) => toggleSkills(index, event)}
                                         >
                                             <img src={skillIcon} alt="skills" className="experience__skills-icon" />
                                         </button>
                                         <div
-                                            className={`experience__skills-tooltip ${tooltipPlacement.index === index ? `experience__skills-tooltip--${tooltipPlacement.placement}` : ""}`}
+                                            className={`experience__skills-tooltip ${
+                                                tooltipPlacement.index === index || openSkillsIndex === index
+                                                    ? `experience__skills-tooltip--${tooltipPlacement.placement} experience__skills-tooltip--visible`
+                                                    : ""
+                                            }`}
                                             role="tooltip"
                                         >
                                             {item.skills.map((s, i) => (
